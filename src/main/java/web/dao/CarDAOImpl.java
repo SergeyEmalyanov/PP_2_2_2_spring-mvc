@@ -23,6 +23,6 @@ public class CarDAOImpl implements CarDAO {
     @Override
     public List<Car> getCars(Integer quantity) {
         if (quantity == null || quantity >= cars.size()) return cars;
-        else return cars.subList(0, quantity);
+        else return cars.stream().limit(quantity).toList();
     }
 }

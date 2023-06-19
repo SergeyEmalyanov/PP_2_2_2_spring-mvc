@@ -1,5 +1,6 @@
 package web.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,6 +11,8 @@ public class Car {
 
     public Car() {
     }
+
+
     public Car(String carBrand, String model, int series) {
         this.carBrand = carBrand;
         this.model = model;
